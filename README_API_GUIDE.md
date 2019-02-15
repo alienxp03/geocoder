@@ -36,6 +36,14 @@ Similar to `:google`, with the following differences:
 * **Key signup**: https://developers.google.com/maps/premium/
 * **Quota**: 100,000 requests/24 hrs, 10 requests/second
 
+### Google Places Details Basic (`:google_places_details_basic`)
+
+The [Google Places Details API](https://developers.google.com/places/documentation/details) is not, strictly speaking, a geocoding service. It accepts a Google `place_id` and returns address information, ratings and reviews. A `place_id` can be obtained from the Google Places Search lookup (`:google_places_search`) and should be passed to Geocoder as the first search argument: `Geocoder.search("ChIJhRwB-yFawokR5Phil-QQ3zM", lookup: :google_places_details_basic)`.
+
+Only returns basic data here https://developers.google.com/maps/billing/understanding-cost-of-use#basic-data and results in cheaper API costs.
+
+Same requirements as Google Places Details above
+
 ### Google Places Details (`:google_places_details`)
 
 The [Google Places Details API](https://developers.google.com/places/documentation/details) is not, strictly speaking, a geocoding service. It accepts a Google `place_id` and returns address information, ratings and reviews. A `place_id` can be obtained from the Google Places Search lookup (`:google_places_search`) and should be passed to Geocoder as the first search argument: `Geocoder.search("ChIJhRwB-yFawokR5Phil-QQ3zM", lookup: :google_places_details)`.
